@@ -23,3 +23,5 @@ else
     cp "${BUILDPACK_DIR}/${K6_FILE}" "${K6_DIR}"
     chmod +x "${K6_DIR}/${K6_FILE}"
 fi
+
+cp "${K6_DIR}/${K6_FILE}" "${BUILD_DIR}"

@@ -4,4 +4,4 @@
 K6_FILE=k6
 
 # Dependencies path
-K6_FILE="${DEPS_DIR}/${DEPS_IDX}/k6"
+K6_DIR="${DEPS_DIR}/${DEPS_IDX}/k6"

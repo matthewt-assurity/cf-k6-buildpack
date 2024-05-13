@@ -17,8 +17,9 @@ then
     echo "-----> Using k6 from cache"
 else
     echo "-----> Copying over Supercronic"
+    mkdir -p "${K6_DIR}"
     cp "${CACHE_DIR}/${K6_FILE}" "${K6_DIR}"
     chmod +x "${K6_DIR}/${K6_FILE}"
-    cp "${BUILDPACK_DIR}/k6" "${K6_DIR}"
-    chmod +x "${SUPERCRONIC_DIR}/k6"
+    cp "${BUILDPACK_DIR}/${K6_FILE}" "${K6_DIR}"
+    chmod +x "${K6_DIR}/${K6_FILE}"
 fi

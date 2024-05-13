@@ -16,10 +16,10 @@ if [ -f "${CACHE_DIR}"/"${K6_FILE}" ]
 then
     echo "-----> Using k6 from cache"
 else
-    echo "-----> Copying over Supercronic"
+    echo "-----> Copying over k6"
+    echo "-----> creating k6 dir"
     mkdir -p "${K6_DIR}"
-    cp "${CACHE_DIR}/${K6_FILE}" "${K6_DIR}"
-    chmod +x "${K6_DIR}/${K6_FILE}"
+    echo "----> copying k6 file from buildpack dir to k6 dir"
     cp "${BUILDPACK_DIR}/${K6_FILE}" "${K6_DIR}"
     chmod +x "${K6_DIR}/${K6_FILE}"
 fi

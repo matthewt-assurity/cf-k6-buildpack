@@ -7,7 +7,7 @@ Buildpack to install k6 to a Cloud Foundry app
 This buildpack simply installs the k6 binary to a Cloud Foundry app. The k6 binary will be copied to the `app` directory.
 
 ## File and Versions
-The k6 binary in this repo was built with the following command:
+The k6 binary in this repo was built with the following command **in a Linux environment**
 
 ```
 xk6 build latest \

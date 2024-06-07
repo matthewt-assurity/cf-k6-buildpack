@@ -19,7 +19,7 @@ else
     echo "-----> Copying over k6"
     echo "-----> creating k6 dir"
     mkdir -p "${K6_DIR}"
-    echo "----> copying k6 file from buildpack dir to k6 dir"
+    echo "-----> copying k6 file from buildpack dir to k6 dir"
     cp "${BUILDPACK_DIR}/${K6_FILE}" "${K6_DIR}"
     chmod +x "${K6_DIR}/${K6_FILE}"
 fi

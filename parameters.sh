@@ -4,4 +4,4 @@
 K6_FILE=k6.exe
 
 # Dependencies path
-K6_DIR="${DEPS_DIR}/${DEPS_IDX}/k6.exe"
+K6_DIR="${DEPS_DIR}/${DEPS_IDX}/k6"

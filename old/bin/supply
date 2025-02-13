@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+ 
+set -euo pipefail 
+
+# https://docs.cloudfoundry.org/buildpacks/understand-buildpacks.html
+BUILD_DIR="${1}"
+CACHE_DIR="${2}"
+DEPS_DIR="${3}"
+DEPS_IDX="${4}"
+
+BUILDPACK_DIR=$(dirname $(readlink -f ${BASH_SOURCE%/*}))
+source ${BUILDPACK_DIR}/parameters.sh
+
+# Check if k6 exists in the cache
+if [ -f "${CACHE_DIR}"/"${K6_FILE}" ]
+then
+    echo "-----> Using k6 from cache"
+else
+    echo "-----> Copying over k6"
+    echo "-----> creating k6 dir"
+    mkdir -p "${K6_DIR}"
+    echo "-----> copying k6 file from buildpack dir to k6 dir"
+    cp "${BUILDPACK_DIR}/${K6_FILE}" "${K6_DIR}"
+    chmod +x "${K6_DIR}/${K6_FILE}"
+fi
+
+cp "${K6_DIR}/${K6_FILE}" "${BUILD_DIR}"

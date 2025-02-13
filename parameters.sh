@@ -6,5 +6,3 @@ K6_VERSION="v0.56.0"
 K6_ARCHIVE=k6-${K6_VERSION}-linux-amd64.tar.gz
 K6_URL=https://github.com/grafana/k6/releases/download/${K6_VERSION}/${K6_ARCHIVE}
 K6_DIR=k6-${K6_VERSION}-linux-amd64
-# The name of the k6 dir in the actual build of the app
-K6_BUILD_DIR=k6

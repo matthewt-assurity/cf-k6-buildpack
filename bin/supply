@@ -25,5 +25,5 @@ else
 fi
 
 # Copy k6 from the cache dir to the build dir
-echo "-----> Copy ${K6_DIR} from the cache to the build dir: ${K6_BUILD_DIR}"
-cp -rT "${CACHE_DIR}/${K6_DIR}" "${BUILD_DIR}/${K6_BUILD_DIR}"
+echo "-----> Copy contents of ${K6_DIR} from the cache to the build dir"
+cp -rT "${CACHE_DIR}/${K6_DIR}" "${BUILD_DIR}"
